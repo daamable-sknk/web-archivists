@@ -39,16 +39,3 @@ web-archivists/
 | [content.md](./docs/content.md) | 웹사이트 콘텐츠 (텍스트) |
 | [progress.md](./docs/progress.md) | 개발 진행 내역 및 버전 히스토리 |
 
-## 로컬 실행
-
-이 프로젝트는 정적 웹사이트이므로 별도의 빌드 과정 없이 바로 실행할 수 있습니다.
-
-```bash
-# 간단한 HTTP 서버 실행 (Python 3)
-python3 -m http.server 8000
-
-# 또는 Node.js http-server 사용
-npx http-server
-```
-
-브라우저에서 `http://localhost:8000`으로 접속하세요.
