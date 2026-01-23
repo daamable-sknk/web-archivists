@@ -3,8 +3,8 @@
 ## 개요
 
 - **프로젝트명:** 아키비스트는 웹을 꿈꾸는가
-- **도메인:** http://web-archivists.xyz/ (구매 완료, 연결 대기)
-- **배포:** Netlify (설정 예정)
+- **도메인:** https://web-archivists.xyz/
+- **배포:** Netlify
 - **GitHub:** https://github.com/daamable-sknk/web-archivists
 - **기술 스택:** HTML + CSS (프레임워크 없음, JavaScript 최소화)
 
@@ -35,9 +35,9 @@
 - [x] 구글 폼 생성 및 연결
   - URL: https://docs.google.com/forms/d/e/1FAIpQLScG8Od3blAU0v0j4CyR6j49A5XH1XautJKEvBQADSZG39Al8w/viewform
 
-### Phase 3: 배포 (대기 중)
-- [ ] Netlify 배포 설정
-- [ ] 도메인 연결 (web-archivists.xyz)
+### Phase 3: 배포 ✅
+- [x] Netlify 배포 설정
+- [x] 도메인 연결 (web-archivists.xyz)
 
 ## 구글 폼 필드
 

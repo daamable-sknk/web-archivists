@@ -2,10 +2,17 @@
 
 ## 프로젝트 개요
 - **프로젝트명**: 아키비스트는 웹을 꿈꾸는가 (Do Archivists Dream of the Web?)
-- **도메인**: web-archivists.xyz (구매 완료, 연결 대기)
-- **배포**: Netlify (설정 대기)
+- **도메인**: https://web-archivists.xyz/
+- **배포**: Netlify (배포 완료)
 - **저장소**: https://github.com/daamable-sknk/web-archivists
 - **기술 스택**: HTML + CSS (프레임워크 없음, JavaScript 최소화)
+
+---
+
+## 2026.01.24 - Netlify 배포 완료
+
+- Netlify 배포 설정 완료
+- 도메인 연결 완료 (https://web-archivists.xyz/)
 
 ---
 
@@ -172,11 +179,6 @@ Week 04 (1개 프레젠테이션)
 ---
 
 ## 다음 작업 예정
-
-### 배포 준비
-- [ ] Netlify 설정
-- [ ] 도메인 연결 (web-archivists.xyz)
-- [ ] 최종 테스트 (다양한 디바이스/브라우저)
 
 ### 추가 개선 사항 (선택)
 - [ ] 타이포그래피 미세 조정
