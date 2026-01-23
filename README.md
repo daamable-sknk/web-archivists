@@ -22,8 +22,6 @@ web-archivists/
 │   ├── favicon.ico     # 파비콘
 │   └── og-image.png    # Open Graph 이미지
 └── docs/               # 프로젝트 문서
-    ├── README.md       # 문서 인덱스
-    ├── start.md        # 원본 기획 문서
     ├── project-plan.md # 웹사이트 개발 계획
     ├── design-spec.md  # 디자인 명세 및 스타일 가이드
     ├── content.md      # 웹사이트 콘텐츠
