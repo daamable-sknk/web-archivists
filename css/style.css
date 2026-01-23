@@ -1,0 +1,659 @@
+/* ========================================
+   RESET & BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    min-height: 100vh;
+}
+
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+.sidebar {
+    width: 400px;
+    min-height: 100vh;
+    background-color: #fafafa;
+    border-right: 1px solid #e0e0e0;
+    padding: 3rem 2.5rem;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Site Header */
+.site-header {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+}
+
+.site-subtitle {
+    font-size: 0.75rem;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Reference Box */
+.reference-box {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-left: 2px solid #000000;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* Info Sections */
+.info-section {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.info-title {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #999999;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    position: relative;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.info-list li:before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: #999999;
+}
+
+.inline-link {
+    color: #000000;
+    border-bottom: 1px solid #d0d0d0;
+    transition: all 0.2s ease;
+}
+
+.inline-link:hover {
+    border-bottom-color: #000000;
+    font-weight: 500;
+}
+
+.location-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.location-name .inline-link {
+    font-weight: 600;
+}
+
+.location-address {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: #555555;
+}
+
+.map-link {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.partner-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.partner-name:last-child {
+    margin-bottom: 0;
+}
+
+.partner-name .inline-link {
+    font-weight: 600;
+}
+
+.location-link {
+    font-size: 0.75rem;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.125rem;
+}
+
+.location-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* CTA Box */
+.cta-box {
+    margin-top: 1rem;
+}
+
+/* 신청 가능 시: Apply Now 버튼 보이기 */
+.cta-box.open .cta-open {
+    display: block;
+}
+
+.cta-box.open .cta-closed {
+    display: none;
+}
+
+/* 신청 마감 시: 마감 메시지 보이기 */
+.cta-box.closed .cta-open {
+    display: none;
+}
+
+.cta-box.closed .cta-closed {
+    display: block;
+}
+
+.cta-button {
+    display: block;
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.cta-closed {
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    padding: 1rem 2rem;
+}
+
+.closed-text {
+    font-size: 0.875rem;
+    color: #999999;
+    letter-spacing: 0.05em;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.footer-credit {
+    font-size: 0.6875rem;
+    line-height: 1.6;
+    color: #888888;
+    margin-bottom: 1.5rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.footer-credit a {
+    color: #000000;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.footer-credit a:hover {
+    border-bottom-color: #000000;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-link {
+    font-size: 0.6875rem;
+    color: #666666;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.main-content {
+    flex: 1;
+    padding: 3rem;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 2rem 0;
+}
+
+.hero-question {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.4;
+    color: #333333;
+    margin-bottom: 1.25rem;
+}
+
+.hero-question:last-child {
+    margin-bottom: 0;
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 1000px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.intro-question {
+    font-style: italic;
+}
+
+/* Schedule Section */
+.schedule-section {
+    padding: 2rem 0;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #999999;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.schedule-card {
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    transition: all 0.25s ease;
+    background-color: #ffffff;
+}
+
+.schedule-card:hover {
+    border-color: #000000;
+    box-shadow: 2px 2px 0 #000000;
+    transform: translate(-2px, -2px);
+}
+
+.schedule-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999999;
+}
+
+.week-label {
+    font-weight: 600;
+    color: #000000;
+}
+
+.schedule-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.schedule-topics {
+    list-style: none;
+    padding-left: 0;
+}
+
+.schedule-topics li {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    position: relative;
+    color: #555555;
+}
+
+.schedule-topics li:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #d0d0d0;
+}
+
+.schedule-description {
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 4rem 0 2rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.philosophy-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.philosophy-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   CURRICULUM PAGE
+   ======================================== */
+
+/* Back Link */
+.back-section {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.back-link {
+    font-size: 0.75rem;
+    color: #666666;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+/* Curriculum Navigation */
+.curriculum-nav {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.nav-title {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #999999;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-list li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    color: #000000;
+    padding: 0.25rem 0;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    padding-left: 0.5rem;
+    font-weight: 500;
+}
+
+/* Curriculum Main Content */
+.curriculum-main {
+    gap: 3rem;
+}
+
+.curriculum-intro {
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.intro-message {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555555;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.intro-quote {
+    font-style: italic;
+    color: #333333;
+}
+
+/* Week Sections */
+.week-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.week-section:last-of-type {
+    border-bottom: none;
+}
+
+.week-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+}
+
+.week-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #000000;
+    font-weight: 600;
+}
+
+.week-date {
+    font-size: 0.625rem;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.week-theme {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+/* Material List */
+.material-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.material-item {
+    display: flex;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.material-item:hover {
+    background-color: #fafafa;
+    padding-left: 0.5rem;
+}
+
+.material-item:last-child {
+    border-bottom: none;
+}
+
+.material-number {
+    font-size: 0.75rem;
+    color: #999999;
+    min-width: 60px;
+    margin-right: 1rem;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.material-link {
+    font-size: 1rem;
+    color: #000000;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+}
+
+.material-link:hover {
+    border-bottom-color: #000000;
+    font-weight: 500;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 2rem 1.5rem;
+    }
+
+    .sidebar-content {
+        gap: 1.5rem;
+    }
+
+    .main-content {
+        padding: 2rem 1.5rem;
+        gap: 3rem;
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-title {
+        font-size: 1.25rem;
+    }
+
+    .hero-question {
+        font-size: 1.25rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .schedule-card {
+        padding: 1.25rem;
+    }
+
+    .philosophy-text {
+        font-size: 1rem;
+    }
+}
