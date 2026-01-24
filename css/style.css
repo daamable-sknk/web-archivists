@@ -285,6 +285,13 @@ a {
     border-bottom-color: #000000;
 }
 
+.footer-updated {
+    font-size: 0.625rem;
+    color: #999999;
+    margin-top: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
 /* ========================================
    MAIN CONTENT
    ======================================== */

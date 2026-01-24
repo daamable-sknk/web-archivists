@@ -85,6 +85,11 @@
 - 외부 링크에 ↬ 표시
 - 모노크롬 컬러 팔레트 (#000, #fff, #fafafa, #e0e0e0)
 
+## 도구
+
+- **AI 코딩 에이전트:** [OpenCode](https://opencode.ai/)와 함께 개발
+- **Favicon:** [favicon.io](https://favicon.io/)에서 생성
+
 ---
 
 Last updated: 2026.01.24
