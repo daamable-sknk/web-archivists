@@ -241,6 +241,14 @@ a {
     font-size: 0.875rem;
     color: #999999;
     letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.next-season {
+    font-size: 0.75rem;
+    color: #666666;
+    letter-spacing: 0.03em;
+    font-weight: 500;
 }
 
 /* Sidebar Footer */
