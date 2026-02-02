@@ -1,0 +1,406 @@
+/* ============================================
+   03-styled.css - HTML/CSS 실습용 스타일시트
+   ============================================
+   
+   이 파일은 03-styled.html에 적용되는 스타일시트입니다.
+   각 섹션별로 어떤 CSS 속성이 사용되는지 주석으로 설명합니다.
+*/
+
+
+/* ============================================
+   1. 기본 설정 (Reset & Base)
+   ============================================ */
+
+/* 
+   box-sizing: border-box 
+   - 요소의 width/height 계산 시 padding과 border를 포함
+   - 이렇게 하면 레이아웃 계산이 훨씬 직관적
+   - 예: width: 100px 설정 시, padding 20px을 넣어도 전체 너비는 100px 유지
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* 
+   body 기본 스타일
+   - margin: 0, padding: 0 → 브라우저 기본 여백 제거
+   - font-family → 시스템 폰트 우선 사용 (빠른 로딩)
+   - font-size: 17px → 본문 기본 글자 크기
+   - line-height: 1.8 → 줄 간격 (글자 크기의 1.8배, 가독성 향상)
+   - color: #333 → 순수 검정(#000)보다 부드러운 글자색
+   - background-color: #f5f5f5 → 연한 회색 배경 (눈의 피로 감소)
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+
+/* ============================================
+   2. 레이아웃 - 콘텐츠 너비 제한
+   ============================================ */
+
+/* 
+   max-width: 680px
+   - 한 줄에 너무 많은 글자가 있으면 읽기 어려움
+   - 일반적으로 45~75자가 최적 (한글은 25~40자 정도)
+   - 680px은 약 35~40자 정도로 읽기 편한 너비
+   
+   margin: 0 auto
+   - 상하 여백 0, 좌우 여백 auto
+   - 좌우 auto는 남은 공간을 균등 분배 → 가운데 정렬 효과
+   
+   padding: 0 24px
+   - 좌우에 24px 여백 추가 (모바일에서 화면 가장자리와 간격 확보)
+*/
+header,
+main,
+footer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+/* ============================================
+   3. 헤더 영역 (Header)
+   ============================================ */
+
+/* 
+   헤더 전체 스타일
+   - padding-top: 48px → 상단에 충분한 여백 (시원한 느낌)
+   - text-align: center → 텍스트 가운데 정렬
+*/
+header {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+/* 
+   "작가와의 대화" - 카테고리/키커 텍스트
+   - header > p:first-child → header의 직접 자식 p 중 첫 번째
+   - letter-spacing: 2px → 글자 사이 간격 (대문자 스타일에 어울림)
+   - text-transform: uppercase → 영문일 경우 대문자로 변환
+*/
+header > p:first-child {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* 
+   h1 메인 제목
+   - font-size: 32px → 큰 제목 크기
+   - font-weight: 700 → 굵은 글씨 (400: 보통, 700: 굵게)
+   - line-height: 1.3 → 제목은 본문보다 줄 간격 좁게
+   - color: #111 → 본문(#333)보다 더 진한 색
+*/
+h1 {
+  margin: 12px 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+}
+
+/* 
+   "신형철 평론가를 만나다" - 부제목
+   - :nth-child(3) → 3번째 자식 요소 선택
+*/
+header > p:nth-child(3) {
+  margin: 0 0 24px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* 
+   리드 문단 (기사 요약)
+   - border-left: 4px solid #333 → 왼쪽에 굵은 세로선 (인용 느낌)
+   - text-align: left → 헤더는 center지만 이 부분만 왼쪽 정렬
+*/
+header > p:last-child {
+  margin: 0;
+  padding: 16px 20px;
+  background-color: #fff;
+  border-left: 4px solid #333;
+  text-align: left;
+  font-size: 15px;
+  color: #555;
+}
+
+
+/* ============================================
+   4. 메인 콘텐츠 (Main)
+   ============================================ */
+
+/* 
+   main 영역
+   - background-color: #fff → 흰색 배경 (본문 영역 강조)
+   - body 배경(#f5f5f5)과 대비되어 카드처럼 보임
+*/
+main {
+  background-color: #fff;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+
+/* ============================================
+   5. 이미지 (Figure)
+   ============================================ */
+
+/* 
+   figure - 이미지와 캡션을 감싸는 요소
+   - margin: 0 → 브라우저 기본 margin 제거
+*/
+figure {
+  margin: 0 0 32px;
+}
+
+/* 
+   이미지 스타일
+   - width: 100% → 부모 요소 너비에 맞춤
+   - max-width: 480px → 최대 너비 제한 (너무 커지지 않게)
+   - height: auto → 비율 유지하며 높이 자동 계산
+   - display: block → 이미지 아래 여백 제거 (inline 요소의 baseline 문제 해결)
+   - margin: 0 auto → 가운데 정렬
+*/
+figure img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 
+   figcaption - 이미지 설명
+   - 작은 글씨, 회색, 가운데 정렬로 부수적인 정보임을 표현
+*/
+figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
+
+/* ============================================
+   6. 섹션과 제목 (Section & Headings)
+   ============================================ */
+
+/* 
+   section - 각 주제별 영역
+   - margin-bottom: 40px → 섹션 간 충분한 간격
+*/
+section {
+  margin-bottom: 40px;
+}
+
+/* 
+   h2 소제목
+   - border-bottom → 제목 아래 밑줄 효과
+   - padding-bottom → 밑줄과 텍스트 사이 간격
+*/
+h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* 
+   p 문단
+   - text-align: justify → 양쪽 정렬 (신문/잡지 스타일)
+   - 한글에서는 어색할 수 있어 left로 바꿔도 됨
+*/
+p {
+  margin: 0 0 16px;
+  text-align: justify;
+}
+
+
+/* ============================================
+   7. 인용문 (Blockquote)
+   ============================================ */
+
+/* 
+   blockquote - 인용문 스타일
+   - background-color: #fafafa → 살짝 다른 배경색으로 구분
+   - border-left: 4px solid #ddd → 왼쪽 세로선 (인용의 전통적 표현)
+   - font-style: italic → 기울임체로 인용임을 표시
+*/
+blockquote {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background-color: #fafafa;
+  border-left: 4px solid #ddd;
+  font-style: italic;
+}
+
+/* 
+   인용문 내부 문단
+   - margin: 0 → blockquote 내부에서는 문단 간격 제거
+*/
+blockquote p {
+  margin: 0;
+  color: #444;
+}
+
+/* 
+   cite - 출처 표시
+   - display: block → 줄바꿈 (기본은 inline)
+   - font-style: normal → 기울임 해제 (blockquote의 italic과 구분)
+   - text-align: right → 오른쪽 정렬 (출처는 보통 오른쪽에)
+*/
+blockquote cite {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-style: normal;
+  color: #888;
+  text-align: right;
+}
+
+
+/* ============================================
+   8. 주석 (Aside)
+   ============================================ */
+
+/* 
+   sup - 위첨자 (주석 번호)
+   - 본문보다 작은 글씨, 연한 색상
+*/
+sup {
+  font-size: 12px;
+  color: #666;
+}
+
+/* 
+   aside - 부가 정보 영역 (주석)
+   - border-top → 본문과 구분하는 선
+*/
+aside {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+}
+
+/* 
+   aside 내부의 h2
+   - 본문 h2와 다르게 작은 크기, 밑줄 없음
+*/
+aside h2 {
+  font-size: 16px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* 
+   주석 목록 스타일
+   - padding-left: 20px → 기본 들여쓰기 (불릿 공간)
+*/
+aside ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+aside li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 
+   주석의 용어 부분 (굵게)
+*/
+aside li strong {
+  color: #333;
+}
+
+
+/* ============================================
+   9. 푸터 (Footer)
+   ============================================ */
+
+/* 
+   footer - 페이지 하단 정보
+   - border-top → 본문과 구분
+   - 작은 글씨, 연한 색상으로 부수적 정보임을 표현
+*/
+footer {
+  padding-top: 24px;
+  padding-bottom: 48px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #888;
+}
+
+footer p {
+  margin: 0 0 4px;
+  text-align: left;
+}
+
+/* 
+   footer 링크
+   - text-decoration: none → 밑줄 제거
+   - :hover → 마우스 올렸을 때 밑줄 표시
+*/
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================
+   10. 텍스트 강조 (Emphasis)
+   ============================================ */
+
+/* 
+   em - 강조 (기울임)
+*/
+em {
+  font-style: italic;
+}
+
+/* 
+   strong - 강한 강조 (굵게)
+   - font-weight: 600 → semi-bold (700보다 약간 가벼움)
+*/
+strong {
+  font-weight: 600;
+}
+
+
+/* ============================================
+   11. 링크 (Links)
+   ============================================ */
+
+/* 
+   a - 하이퍼링크
+   - color: #0066cc → 전통적인 링크 파란색
+   - text-decoration: none → 기본 밑줄 제거
+   - :hover → 마우스 올렸을 때 밑줄 표시 (클릭 가능함을 암시)
+*/
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
