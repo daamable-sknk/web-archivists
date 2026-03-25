@@ -620,6 +620,115 @@ a {
 }
 
 /* ========================================
+   PARTICIPANTS PAGE
+   ======================================== */
+.participants-main {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.participants-section {
+    padding: 2rem 0;
+}
+
+.card-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+}
+
+.index-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+    padding: 1.25rem 1.5rem;
+    min-height: 120px;
+    background-color: #ffffff;
+    position: relative;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.index-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #e0e0e0;
+}
+
+.index-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: #000000;
+}
+
+.index-card:hover::before {
+    background-color: #000000;
+}
+
+.card-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.card-keywords {
+    font-size: 0.8125rem;
+    color: #666666;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.index-card.no-link {
+    cursor: default;
+    background-color: #fafafa;
+    border-color: #e8e8e8;
+}
+
+.index-card.no-link::before {
+    background-color: #e8e8e8;
+}
+
+.index-card.no-link:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #e8e8e8;
+}
+
+.index-card.no-link .card-label {
+    color: #999999;
+}
+
+.index-card.no-link .card-keywords {
+    color: #bbbbbb;
+}
+
+/* Participants Link (Main Page) */
+.participants-link {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+}
+
+.participants-link a {
+    color: #666666;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.participants-link a:hover {
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+/* ========================================
    RESPONSIVE
    ======================================== */
 @media (max-width: 1024px) {

@@ -32,16 +32,17 @@ Do Archivists Dream of the Web
 서울특별시 중구 세종대로16길 23, 3층
 http://www.dosi.or.kr/
 
-#### 파트너십
+#### 협력
+
 - 한국기록전문가협회 (https://www.archivists.or.kr/)
+- 걷고싶은도시만들기시민연대(http://www.dosi.or.kr/)
 - SKUNKWORKS STUDIO (https://skunkworks.co.kr/)
 
 #### 신청하기
 (구글 폼 링크: https://docs.google.com/forms/d/e/1FAIpQLScG8Od3blAU0v0j4CyR6j49A5XH1XautJKEvBQADSZG39Al8w/viewform)
 
-상태 3가지:
-- 신청 전: "신청 전" (회색 배경)
-- 신청 가능: "신청하기 ↬" (검정 테두리, 호버 시 반전)
+상태 2가지:
+- 신청 가능: "APPLY NOW ↬" (검정 테두리, 호버 시 반전)
 - 신청 마감: "신청 마감" (검정 배경, 흰 글씨)
 
 #### 크레딧
