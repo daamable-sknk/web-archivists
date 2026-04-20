@@ -214,6 +214,11 @@ a {
     display: block;
 }
 
+.cta-notice {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
 .cta-button {
     display: block;
     text-align: center;
