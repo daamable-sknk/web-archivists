@@ -37,5 +37,6 @@ web-archivists/
 | [project-plan.md](./docs/project-plan.md) | 웹사이트 개발 계획 및 작업 목록 |
 | [design-spec.md](./docs/design-spec.md) | 디자인 명세 및 스타일 가이드 |
 | [content.md](./docs/content.md) | 웹사이트 콘텐츠 (텍스트) |
+| [participants-guide.md](./docs/participants-guide.md) | 함께한 사람들 페이지 작성·갱신 가이드 |
 | [progress.md](./docs/progress.md) | 개발 진행 내역 및 버전 히스토리 |
 

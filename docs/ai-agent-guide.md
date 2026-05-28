@@ -13,10 +13,13 @@
 ```
 index.html          # 메인 페이지
 curriculum/index.html  # 커리큘럼 페이지 (신청자 전용)
+participants/index.html  # 함께한 사람들
 css/style.css       # 전체 스타일시트
 assets/             # favicon, og-image
 docs/               # 프로젝트 문서
 ```
+
+함께한 사람들 페이지를 수정할 때는 [participants-guide.md](./participants-guide.md)를 따릅니다.
 
 ## 코딩 컨벤션
 
@@ -58,6 +61,7 @@ docs/               # 프로젝트 문서
 - [ ] Last updated 날짜 업데이트 (형식: `YYYY.MM.DD`)
   - `index.html` (푸터)
   - `curriculum/index.html` (푸터)
+  - `participants/index.html` (함께한 사람들 수정 시)
   - `docs/project-plan.md`
   - `docs/ai-agent-guide.md`
 
