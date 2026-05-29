@@ -193,4 +193,4 @@ border-top: 1px solid #e0e0e0;
 
 ---
 
-Last updated: 2026.04.15
+Last updated: 2026.05.29

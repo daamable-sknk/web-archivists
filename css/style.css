@@ -214,11 +214,6 @@ a {
     display: block;
 }
 
-.cta-notice {
-    font-size: 0.875rem;
-    margin-bottom: 0.75rem;
-}
-
 .cta-button {
     display: block;
     text-align: center;
@@ -246,14 +241,12 @@ a {
     font-size: 0.875rem;
     color: #999999;
     letter-spacing: 0.05em;
-    margin-bottom: 0.75rem;
 }
 
-.next-season {
-    font-size: 0.75rem;
-    color: #666666;
-    letter-spacing: 0.03em;
-    font-weight: 500;
+.closed-text--sub {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: #bbbbbb;
 }
 
 /* Sidebar Footer */
